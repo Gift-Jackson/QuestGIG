@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- stylesheet link -->
+    <link rel="stylesheet" href="style2.css">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="parent-container">
+        <div class="container">
+            <!-- left hand side -->
+            <div class="left-side">
+                <!-- <img src="background.png" alt="quest-bg"> -->
+            </div>
+    
+            <!-- right hand side -->
+            <div class="right-side">
+                <div class="form">
+                    <div class="title">
+                        <h1>Register</h1>
+                        <p>Sign Up to get started!</p>
+                    </div>
+                    <form>
+                        <div class="input-field">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" placeholder="Enter your fullname..." id="name">
+                            <i class="fa-regular fa-user"></i>
+                        </div>
+                        <div class="input-field">
+                            <label for="email">Qmail Address</label>
+                            <input type="email" placeholder="anyname@qmail.com" id="email">
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+                        <div class="input-field">
+                            <label for="pass">Password</label>
+                            <input type="password" id="pass" placeholder="8 characters..." id="pass">
+                            <div id="icon">
+                                <i id="close" class="fa-regular fa-eye-slash"></i>
+                                <i id="open" class="fa-regular fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="input-field">
+                            <label for="pass2">Confirm Password</label>
+                            <input type="password" id="pass2" placeholder="Confirm your password..." id="pass2">
+                            <div id="icon2">
+                                <i id="close2" class="fa-regular fa-eye-slash"></i>
+                                <i id="open2" class="fa-regular fa-eye"></i>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn1">Sign Up</button>
+                        <div class="line">
+                            <p>Already have an account? <a href="login.html">Login Here!</a></p>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script>
+        // password
+        const icon = document.getElementById("icon");
+        const pass = document.getElementById("pass");
+        const open = document.getElementById("open");
+        const close = document.getElementById("close");
+
+        // confirm password
+        const icon2 = document.getElementById("icon2");
+        const pass2 = document.getElementById("pass2");
+        const open2 = document.getElementById("open2");
+        const close2 = document.getElementById("close2");
+
+        // password
+        icon.addEventListener("click",()=>{
+            if(pass.type === "password"){
+                pass.type = "text";
+                open.style.display = "block";
+                close.style.display = "none";
+            }
+            else{
+                pass.type = "password";
+                open.style.display = "none";
+                close.style.display = "block";
+            }
+        });
+
+        // confirm password
+        icon2.addEventListener("click",()=>{
+            if(pass2.type === "password"){
+                pass2.type = "text";
+                open2.style.display = "block";
+                close2.style.display = "none";
+            }
+            else{
+                pass2.type = "password";
+                open2.style.display = "none";
+                close2.style.display = "block";
+            }
+        });
+    </script>
+</body>
+</html>
